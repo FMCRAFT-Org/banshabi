@@ -1,0 +1,4 @@
+settings:
+  data-file: "data.yml"
+  auto-save: true
+  auto-save-interval: 300

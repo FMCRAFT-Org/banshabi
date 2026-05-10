@@ -1,0 +1,157 @@
+name: BanShabi
+version: ${project.version}
+main: com.ban_shabi.BanShabi
+api-version: 1.21
+author: BanShabi
+description: A punishment management plugin
+
+commands:
+  ban:
+    description: Ban a player
+    usage: /ban <player> <time> <reason> [-s]
+    permission: banshabi.ban
+  unban:
+    description: Unban a player
+    usage: /unban <player|id>
+    permission: banshabi.unban
+  kick:
+    description: Kick a player
+    usage: /kick <player> <reason> [-s]
+    permission: banshabi.kick
+  mute:
+    description: Mute a player
+    usage: /mute <player> <time> <reason> [-s]
+    permission: banshabi.mute
+  unmute:
+    description: Unmute a player
+    usage: /unmute <player|id>
+    permission: banshabi.unmute
+  warn:
+    description: Warn a player
+    usage: /warn <player> <reason> [-s]
+    permission: banshabi.warn
+  unwarn:
+    description: Remove a warning from a player
+    usage: /unwarn <player|id>
+    permission: banshabi.unwarn
+  ban-ip:
+    description: Ban an IP address
+    usage: /ban-ip <ip> <time> <reason> [-s]
+    permission: banshabi.banip
+  unban-ip:
+    description: Unban an IP address
+    usage: /unban-ip <ip>
+    permission: banshabi.unbanip
+  mute-ip:
+    description: Mute an IP address
+    usage: /mute-ip <ip> <time> <reason> [-s]
+    permission: banshabi.muteip
+  unmute-ip:
+    description: Unmute an IP address
+    usage: /unmute-ip <ip>
+    permission: banshabi.unmuteip
+  warn-ip:
+    description: Warn an IP address
+    usage: /warn-ip <ip> <reason> [-s]
+    permission: banshabi.warnip
+  unwarn-ip:
+    description: Remove a warning from an IP address
+    usage: /unwarn-ip <ip>
+    permission: banshabi.unwarnip
+  kick-ip:
+    description: Kick all players from an IP address
+    usage: /kick-ip <ip> <reason> [-s]
+    permission: banshabi.kickip
+  banlist:
+    description: List all bans or a specific player's bans
+    usage: /banlist [player]
+    permission: banshabi.banlist
+  warnlist:
+    description: List all warnings or a specific player's warnings
+    usage: /warnlist [player]
+    permission: banshabi.warnlist
+  mutelist:
+    description: List all mutes or a specific player's mutes
+    usage: /mutelist [player]
+    permission: banshabi.mutelist
+  lookip:
+    description: Look up a player's IP address
+    usage: /lookip <player>
+    permission: banshabi.lookip
+
+permissions:
+  banshabi.*:
+    description: Gives access to all BanShabi commands
+    children:
+      banshabi.ban: true
+      banshabi.unban: true
+      banshabi.kick: true
+      banshabi.mute: true
+      banshabi.unmute: true
+      banshabi.warn: true
+      banshabi.unwarn: true
+      banshabi.banip: true
+      banshabi.unbanip: true
+      banshabi.muteip: true
+      banshabi.unmuteip: true
+      banshabi.warnip: true
+      banshabi.unwarnip: true
+      banshabi.kickip: true
+      banshabi.banlist: true
+      banshabi.warnlist: true
+      banshabi.mutelist: true
+      banshabi.lookip: true
+  banshabi.ban:
+    description: Allows banning players
+    default: op
+  banshabi.unban:
+    description: Allows unbanning players
+    default: op
+  banshabi.kick:
+    description: Allows kicking players
+    default: op
+  banshabi.mute:
+    description: Allows muting players
+    default: op
+  banshabi.unmute:
+    description: Allows unmuting players
+    default: op
+  banshabi.warn:
+    description: Allows warning players
+    default: op
+  banshabi.unwarn:
+    description: Allows removing warnings
+    default: op
+  banshabi.banip:
+    description: Allows banning IP addresses
+    default: op
+  banshabi.unbanip:
+    description: Allows unbanning IP addresses
+    default: op
+  banshabi.muteip:
+    description: Allows muting IP addresses
+    default: op
+  banshabi.unmuteip:
+    description: Allows unmuting IP addresses
+    default: op
+  banshabi.warnip:
+    description: Allows warning IP addresses
+    default: op
+  banshabi.unwarnip:
+    description: Allows removing IP warnings
+    default: op
+  banshabi.kickip:
+    description: Allows kicking IP addresses
+    default: op
+  banshabi.banlist:
+    description: Allows viewing ban list
+    default: op
+  banshabi.warnlist:
+    description: Allows viewing warning list
+    default: op
+  banshabi.mutelist:
+    description: Allows viewing mute list
+    default: op
+  banshabi.lookip:
+    description: Allows looking up player IP addresses
+    default: op

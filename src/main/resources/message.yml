@@ -1,0 +1,233 @@
+prefix: "&c&l[系统] &7"
+
+broadcast:
+  punishment: "&7玩家 &e%player% &7因 &6%reason% &7被 &b%operator% &7%type% &7时长 &e%time%"
+
+ban:
+  success: "&a✔ 玩家 %player% 已成功封禁"
+  player_not_found: "&c✘ 玩家 %player% 不存在"
+  already_banned: "&c✘ 玩家 %player% 已处于封禁状态"
+  invalid_time: "&c✘ 时间格式错误，请使用：1d、2h、30m、60s、-1(永久)"
+  no_reason: "&c✘ 请输入封禁原因"
+  banned_message: |
+    &4&m                                                                                &r
+    &c&l⚠ 你已被服务器封禁 ⚠
+    &4&m                                                                                &r
+    &7玩家ID: &f%id%
+    &7封禁原因: &6%reason%
+    &7封禁时长: &e%time%
+    &7剩余时间: &c%remaining%
+    &7执行管理: &b%operator%
+    &7封禁日期: &f%dateStart%
+    &f
+    &7该封禁行为可能由系统自动检测，如误封可通过下方方式申诉
+    &f
+    &7服主QQ：&b3926782841 &7(☆☆☆)
+    &7大管理QQ：&b3558263196 &7(☆☆☆)
+    &7申诉邮箱：&badmin@fmcraft.top &7(☆☆)
+    &4&m                                                                                &r
+  banned_message_permanent: |
+    &4&m                                                                                &r
+    &4&l⚠ 你已被服务器永久封禁 ⚠
+    &4&m                                                                                &r
+    &7玩家ID: &f%id%
+    &7封禁原因: &6%reason%
+    &7执行管理: &b%operator%
+    &7封禁日期: &f%dateStart%
+    &f
+    &7永久封禁无法自动解除，仅接受正规申诉
+    &f
+    &7服主QQ：&b3926782841 &7(☆☆☆)
+    &7大管理QQ：&b3558263196 &7(☆☆☆)
+    &7申诉邮箱：&badmin@fmcraft.top &7(☆☆)
+    &4&m                                                                                &r
+
+unban:
+  success: "&a✔ 玩家 %player% 已解封"
+  player_not_found: "&c✘ 玩家 %player% 不存在"
+  not_banned: "&c✘ 该玩家未被封禁"
+  id_not_found: "&c✘ 未找到该封禁记录"
+
+kick:
+  success: "&a✔ 玩家 %player% 已踢出服务器"
+  player_not_found: "&c✘ 玩家 %player% 不存在"
+  no_reason: "&c✘ 请输入踢出原因"
+  kicked_message: "&e&l你已被踢出服务器！\n&7原因: &6%reason%\n&7操作员: &b%operator%"
+
+mute:
+  success: "&a✔ 玩家 %player% 已禁言"
+  player_not_found: "&c✘ 玩家 %player% 不存在"
+  already_muted: "&c✘ 该玩家已被禁言"
+  invalid_time: "&c✘ 时间格式错误，请使用：1d、2h、30m、60s、-1(永久)"
+  no_reason: "&c✘ 请输入禁言原因"
+  muted_message: |
+    &9&m                                                                                &r
+    &9&l⚠ 你已被服务器禁言 ⚠
+    &9&m                                                                                &r
+    &7玩家ID: &f%id%
+    &7禁言原因: &6%reason%
+    &7禁言时长: &e%time%
+    &7剩余时间: &9%remaining%
+    &7执行管理: &b%operator%
+    &7禁言日期: &f%dateStart%
+    &f
+    &7禁言期间无法发言，请勿重复发送消息
+    &9&m                                                                                &r
+  muted_message_permanent: |
+    &3&m                                                                                &r
+    &3&l⚠ 你已被服务器永久禁言 ⚠
+    &3&m                                                                                &r
+    &7玩家ID: &f%id%
+    &7禁言原因: &6%reason%
+    &7执行管理: &b%operator%
+    &7禁言日期: &f%dateStart%
+    &f
+    &7永久禁言仅可通过管理解除
+    &3&m                                                                                &r
+  cannot_speak: "&c✘ 你已被禁言，无法发送消息"
+
+unmute:
+  success: "&a✔ 玩家 %player% 禁言已解除"
+  player_not_found: "&c✘ 玩家 %player% 不存在"
+  not_muted: "&c✘ 该玩家未被禁言"
+  id_not_found: "&c✘ 未找到该禁言记录"
+
+warn:
+  success: "&a✔ 玩家 %player% 已收到警告"
+  player_not_found: "&c✘ 玩家 %player% 不存在"
+  no_reason: "&c✘ 请输入警告原因"
+  warned_message: "&6&l你已被警告！\n&7ID: &f%id%\n&7原因: &e%reason%\n&7操作员: &b%operator%"
+  warning_count: "&7当前警告次数: &e%count%"
+
+unwarn:
+  success: "&a✔ 玩家 %player% 警告已移除"
+  player_not_found: "&c✘ 玩家 %player% 不存在"
+  no_warnings: "&c✘ 该玩家暂无警告记录"
+  id_not_found: "&c✘ 未找到该警告记录"
+
+banlist:
+  header: "&6&m+------------------+&r &6封禁列表 &6&m+------------------+"
+  entry: "&7ID: &f%id% &7| 玩家: &e%player% &7| 原因: &6%reason% &7| 剩余: &c%remaining%"
+  entry_permanent: "&7ID: &f%id% &7| 玩家: &e%player% &7| 原因: &6%reason% &7| &4永久"
+  entry_expired: "&7ID: &f%id% &7| 玩家: &e%player% &7| 原因: &6%reason% &7| &7已过期"
+  entry_removed: "&7ID: &f%id% &7| 玩家: &e%player% &7| 原因: &6%reason% &7| &8已移除"
+  no_bans: "&a暂无封禁记录"
+  player_header: "&6&m+-------------+&r &6%player% 的封禁记录 &6&m+-------------+"
+  player_no_bans: "&a该玩家暂无封禁记录"
+  footer: "&6&m+------------------------------------------------+"
+
+warnlist:
+  header: "&6&m+------------------+&r &6警告列表 &6&m+------------------+"
+  entry: "&7ID: &f%id% &7| 玩家: &e%player% &7| 原因: &6%reason% &7| 时间: &e%date%"
+  entry_removed: "&7ID: &f%id% &7| 玩家: &e%player% &7| 原因: &6%reason% &7| 时间: &e%date% &7| &8已移除"
+  no_warnings: "&a暂无警告记录"
+  player_header: "&6&m+-------------+&r &6%player% 的警告记录 &6&m+-------------+"
+  player_no_warnings: "&a该玩家暂无警告记录"
+  footer: "&6&m+------------------------------------------------+"
+
+mutelist:
+  header: "&6&m+------------------+&r &6禁言列表 &6&m+------------------+"
+  entry: "&7ID: &f%id% &7| 玩家: &e%player% &7| 原因: &6%reason% &7| 剩余: &c%remaining%"
+  entry_permanent: "&7ID: &f%id% &7| 玩家: &e%player% &7| 原因: &6%reason% &7| &4永久"
+  entry_expired: "&7ID: &f%id% &7| 玩家: &e%player% &7| 原因: &6%reason% &7| &7已过期"
+  entry_removed: "&7ID: &f%id% &7| 玩家: &e%player% &7| 原因: &6%reason% &7| &8已移除"
+  no_mutes: "&a暂无禁言记录"
+  player_header: "&6&m+-------------+&r &6%player% 的禁言记录 &6&m+-------------+"
+  player_no_mutes: "&a该玩家暂无禁言记录"
+  footer: "&6&m+------------------------------------------------+"
+
+time:
+  permanent: "永久"
+  day: "天"
+  hour: "小时"
+  minute: "分钟"
+  second: "秒"
+
+no_permission: "&c✘ 你没有执行该命令的权限"
+
+banip:
+  success: "&a✔ IP %ip% 已成功封禁"
+  already_banned: "&c✘ IP %ip% 已处于封禁状态"
+  invalid_time: "&c✘ 时间格式错误，请使用：1d、2h、30m、60s、-1(永久)"
+  no_reason: "&c✘ 请输入封禁原因"
+  banned_message: |
+    &4&m                                                                                &r
+    &c&l⚠ 你的IP已被服务器封禁 ⚠
+    &4&m                                                                                &r
+    &7记录ID: &f%id%
+    &7IP地址: &f%ip%
+    &7封禁原因: &6%reason%
+    &7封禁时长: &e%time%
+    &7剩余时间: &c%remaining%
+    &7执行管理: &b%operator%
+    &7封禁日期: &f%dateStart%
+    &4&m                                                                                &r
+  banned_message_permanent: |
+    &4&m                                                                                &r
+    &4&l⚠ 你的IP已被服务器永久封禁 ⚠
+    &4&m                                                                                &r
+    &7记录ID: &f%id%
+    &7IP地址: &f%ip%
+    &7封禁原因: &6%reason%
+    &7执行管理: &b%operator%
+    &7封禁日期: &f%dateStart%
+    &4&m                                                                                &r
+
+unbanip:
+  success: "&a✔ IP %ip% 已解封"
+  no_ip: "&c✘ 请输入IP地址"
+  not_banned: "&c✘ 该IP未被封禁"
+
+muteip:
+  success: "&a✔ IP %ip% 已禁言"
+  already_muted: "&c✘ 该IP已被禁言"
+  invalid_time: "&c✘ 时间格式错误，请使用：1d、2h、30m、60s、-1(永久)"
+  no_reason: "&c✘ 请输入禁言原因"
+  muted_message: |
+    &9&m                                                                                &r
+    &9&l⚠ 你的IP已被服务器禁言 ⚠
+    &9&m                                                                                &r
+    &7记录ID: &f%id%
+    &7IP地址: &f%ip%
+    &7禁言原因: &6%reason%
+    &7禁言时长: &e%time%
+    &7剩余时间: &9%remaining%
+    &7执行管理: &b%operator%
+    &7禁言日期: &f%dateStart%
+    &9&m                                                                                &r
+  muted_message_permanent: |
+    &3&m                                                                                &r
+    &3&l⚠ 你的IP已被服务器永久禁言 ⚠
+    &3&m                                                                                &r
+    &7记录ID: &f%id%
+    &7IP地址: &f%ip%
+    &7禁言原因: &6%reason%
+    &7执行管理: &b%operator%
+    &7禁言日期: &f%dateStart%
+    &3&m                                                                                &r
+
+unmuteip:
+  success: "&a✔ IP %ip% 禁言已解除"
+  no_ip: "&c✘ 请输入IP地址"
+  not_muted: "&c✘ 该IP未被禁言"
+
+warnip:
+  success: "&a✔ IP %ip% 已收到警告"
+  no_reason: "&c✘ 请输入警告原因"
+  warned_message: "&6&l你的IP已被警告！\n&7ID: &f%id%\n&7IP: &f%ip%\n&7原因: &e%reason%\n&7操作员: &b%operator%"
+
+unwarnip:
+  success: "&a✔ IP %ip% 警告已移除"
+  no_ip: "&c✘ 请输入IP地址"
+  no_warnings: "&c✘ 该IP暂无警告记录"
+
+kickip:
+  success: "&a✔ IP %ip% 已踢出服务器"
+  no_reason: "&c✘ 请输入踢出原因"
+  kicked_message: "&e&l你的IP已被踢出服务器！\n&7IP: &f%ip%\n&7原因: &6%reason%\n&7操作员: &b%operator%"
+
+lookip:
+  no_player: "&c✘ 请输入玩家名"
+  online: "&a✔ 玩家 &e%player% &a当前在线，IP: &f%ip%"
+  offline: "&e玩家 &f%player% &e不在线，历史IP记录: &f%ip%"
+  no_record: "&c✘ 玩家 %player% 暂无IP记录"
